@@ -12,7 +12,8 @@ export default function MessageList({ channelId, onMessageClick }) {
   const fetchMessages = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`/api/messages/${channelId}?limit=20`);
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+      const res = await fetch(`${apiUrl}/api/messages/${channelId}?limit=20`);
       const data = await res.json();
       setMessages(data);
     } catch (error) {

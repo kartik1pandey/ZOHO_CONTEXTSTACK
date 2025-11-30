@@ -16,7 +16,8 @@ export default function ContextSidebar({ message, onClose }) {
   const fetchContext = async () => {
     setLoading(true);
     try {
-      const res = await fetch('/api/context', {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+      const res = await fetch(`${apiUrl}/api/context`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -42,8 +43,9 @@ export default function ContextSidebar({ message, onClose }) {
     
     setCreating(true);
     try {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:4000';
       const action = context.actions[0] || {};
-      await fetch('/api/tasks', {
+      await fetch(`${apiUrl}/api/tasks`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

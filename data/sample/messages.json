@@ -1,0 +1,81 @@
+{
+  "messages": [
+    {
+      "channelId": "dev-frontend",
+      "messageId": "M_001",
+      "authorName": "Sarah Chen",
+      "text": "@ash please test the new login flow by Friday — I'll push the authentication fix to staging today",
+      "createdAt": "2024-11-28T10:30:00Z"
+    },
+    {
+      "channelId": "dev-frontend",
+      "messageId": "M_002",
+      "authorName": "Ash Kumar",
+      "text": "Sure, I'll start testing tomorrow. Do we have the test credentials ready?",
+      "createdAt": "2024-11-28T10:35:00Z"
+    },
+    {
+      "channelId": "dev-frontend",
+      "messageId": "M_003",
+      "authorName": "Mike Rodriguez",
+      "text": "Can someone review PR #234? It fixes the modal overflow issue",
+      "createdAt": "2024-11-28T11:00:00Z"
+    },
+    {
+      "channelId": "dev-frontend",
+      "messageId": "M_004",
+      "authorName": "Sarah Chen",
+      "text": "The staging deployment is complete. @ash credentials are in the shared doc",
+      "createdAt": "2024-11-28T11:20:00Z"
+    },
+    {
+      "channelId": "dev-frontend",
+      "messageId": "M_005",
+      "authorName": "Lisa Park",
+      "text": "@mike I'll review that PR this afternoon. Also, please assign someone to update the component documentation",
+      "createdAt": "2024-11-28T14:15:00Z"
+    },
+    {
+      "channelId": "marketing",
+      "messageId": "M_101",
+      "authorName": "Emma Wilson",
+      "text": "Team, please review the Q4 campaign deck by Wednesday. Link: https://docs.example.com/q4-campaign",
+      "createdAt": "2024-11-27T09:00:00Z"
+    },
+    {
+      "channelId": "marketing",
+      "messageId": "M_102",
+      "authorName": "James Lee",
+      "text": "The new landing page design is ready for feedback. cc @emma",
+      "createdAt": "2024-11-27T15:30:00Z"
+    },
+    {
+      "channelId": "marketing",
+      "messageId": "M_103",
+      "authorName": "Emma Wilson",
+      "text": "Looks great! Can you schedule a meeting to discuss conversion metrics?",
+      "createdAt": "2024-11-28T08:45:00Z"
+    },
+    {
+      "channelId": "support",
+      "messageId": "M_201",
+      "authorName": "David Martinez",
+      "text": "Customer reported login issues with Safari. @tech-team please investigate",
+      "createdAt": "2024-11-28T08:00:00Z"
+    },
+    {
+      "channelId": "support",
+      "messageId": "M_202",
+      "authorName": "Rachel Green",
+      "text": "I'll create a bug ticket and assign it to the dev team",
+      "createdAt": "2024-11-28T08:15:00Z"
+    },
+    {
+      "channelId": "support",
+      "messageId": "M_203",
+      "authorName": "David Martinez",
+      "text": "Thanks! Also, please update the Safari troubleshooting guide in our KB",
+      "createdAt": "2024-11-28T08:20:00Z"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "docs": [
+    {
+      "source": "local",
+      "title": "Authentication Architecture v2",
+      "content": "Our authentication system uses OAuth 2.0 with JWT tokens. The login flow includes multi-factor authentication for enhanced security. Session management is handled via Redis with a 24-hour expiration.",
+      "excerpt": "OAuth 2.0 authentication with JWT tokens and MFA support",
+      "url": "https://docs.internal.com/auth-architecture"
+    },
+    {
+      "source": "github",
+      "title": "PR #234: Fix Modal Overflow",
+      "content": "This PR fixes the modal overflow issue in the settings panel. Changed CSS to use proper flex container and added overflow-y auto to handle long content.",
+      "excerpt": "Fixes modal overflow in settings panel using flexbox",
+      "url": "https://github.com/company/repo/pull/234"
+    },
+    {
+      "source": "google-drive",
+      "title": "Q4 Marketing Campaign Strategy",
+      "content": "Our Q4 campaign focuses on three key segments: enterprise clients, SMBs, and developers. We're launching a new content series highlighting customer success stories and technical deep-dives.",
+      "excerpt": "Q4 campaign targeting enterprise, SMB, and developer segments",
+      "url": "https://docs.example.com/q4-campaign"
+    },
+    {
+      "source": "notion",
+      "title": "Component Documentation Guidelines",
+      "content": "All React components should include TypeScript definitions, prop documentation, usage examples, and accessibility notes. Use Storybook for visual documentation.",
+      "excerpt": "Guidelines for documenting React components with TypeScript",
+      "url": "https://notion.site/component-docs"
+    },
+    {
+      "source": "local",
+      "title": "Safari Troubleshooting Guide",
+      "content": "Common Safari issues include cookie blocking, local storage limits, and WebKit-specific CSS bugs. Always test with latest Safari version. For login issues, check third-party cookie settings.",
+      "excerpt": "Troubleshooting guide for Safari browser compatibility",
+      "url": "https://kb.internal.com/safari-guide"
+    },
+    {
+      "source": "github",
+      "title": "API Rate Limiting Implementation",
+      "content": "Implemented Redis-based rate limiting for API endpoints. Default limits: 100 requests per minute for authenticated users, 10 for anonymous. Uses sliding window algorithm.",
+      "excerpt": "Redis-based API rate limiting with sliding window",
+      "url": "https://github.com/company/repo/issues/445"
+    }
+  ]
+}

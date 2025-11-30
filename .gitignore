@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.Python
+env/
+venv/
+.venv/
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# Docker
+*.pid
+
+# Models (they'll be downloaded)
+nlp_service/models/

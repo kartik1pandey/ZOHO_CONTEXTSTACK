@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: contextstack-backend
+    ports:
+      - "4000:4000"
+    env_file:
+      - .env
+    environment:
+      - NLP_URL=http://nlp:8000
+    depends_on:
+      - nlp
+    networks:
+      - contextstack-network
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  nlp:
+    build: ./nlp_service
+    container_name: contextstack-nlp
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - contextstack-network
+    volumes:
+      - ./nlp_service:/app
+      - nlp_models:/root/.cache
+
+  frontend:
+    build: ./frontend
+    container_name: contextstack-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:4000
+      - VITE_BACKEND_URL=http://backend:4000
+    depends_on:
+      - backend
+    networks:
+      - contextstack-network
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
+networks:
+  contextstack-network:
+    driver: bridge
+
+volumes:
+  nlp_models:

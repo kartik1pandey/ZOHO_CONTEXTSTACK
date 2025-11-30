@@ -16,6 +16,7 @@ app.use('/api/context', require('./routes/context'));
 app.use('/api/messages', require('./routes/messages'));
 app.use('/api/tasks', require('./routes/tasks'));
 app.use('/api/docs', require('./routes/docs'));
+app.use('/cliq', require('./routes/cliq'));
 
 // Health check
 app.get('/health', (req, res) => {

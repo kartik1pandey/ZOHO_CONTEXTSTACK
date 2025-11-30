@@ -1,0 +1,79 @@
+{
+  "name": "ContextStack",
+  "description": "AI-powered workspace context manager that extracts actionable insights from team conversations",
+  "version": "1.0.0",
+  "icon": "icon.png",
+  "category": "productivity",
+  "permissions": [
+    "message.read",
+    "message.write",
+    "channel.read",
+    "user.read"
+  ],
+  "webhooks": [
+    {
+      "name": "message_handler",
+      "url": "https://contextstack-backend.onrender.com/cliq/webhook",
+      "events": [
+        "message.created"
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "extract_actions",
+      "description": "Extract actionable items from a message",
+      "handler": "extractActions"
+    },
+    {
+      "name": "get_context",
+      "description": "Get context for a message",
+      "handler": "getContext"
+    }
+  ],
+  "commands": [
+    {
+      "name": "/contextstack",
+      "description": "Get AI-powered context for current conversation",
+      "handler": "contextCommand"
+    },
+    {
+      "name": "/extract-actions",
+      "description": "Extract action items from recent messages",
+      "handler": "extractActionsCommand"
+    },
+    {
+      "name": "/create-task",
+      "description": "Create a task from a message",
+      "handler": "createTaskCommand",
+      "params": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "widgets": [
+    {
+      "name": "context_panel",
+      "type": "panel",
+      "title": "ContextStack",
+      "url": "https://zoho-contextstack.vercel.app",
+      "location": "sidebar"
+    }
+  ],
+  "settings": {
+    "backend_url": {
+      "type": "string",
+      "label": "Backend API URL",
+      "default": "https://contextstack-backend.onrender.com"
+    },
+    "nlp_url": {
+      "type": "string",
+      "label": "NLP Service URL",
+      "default": "https://zoho-contextstack.onrender.com"
+    }
+  }
+}

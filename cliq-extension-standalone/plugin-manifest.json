@@ -1,0 +1,44 @@
+{
+  "name": "ContextStack",
+  "description": "AI-powered workspace context manager for extracting actionable insights from conversations",
+  "version": "1.0.0",
+  "category": "productivity",
+  "icon": "icon.png",
+  "permissions": [
+    "message.read",
+    "message.write",
+    "channel.read",
+    "user.read"
+  ],
+  "commands": [
+    {
+      "name": "/contextstack",
+      "description": "Show ContextStack help and features",
+      "handler": "showHelp"
+    },
+    {
+      "name": "/extract-actions",
+      "description": "Extract action items from recent messages",
+      "handler": "extractActions"
+    },
+    {
+      "name": "/analyze-context",
+      "description": "Analyze conversation context",
+      "handler": "analyzeContext"
+    },
+    {
+      "name": "/create-task",
+      "description": "Create a task from current conversation",
+      "hint": "task title",
+      "handler": "createTask"
+    }
+  ],
+  "widgets": [
+    {
+      "name": "context_widget",
+      "type": "applet",
+      "title": "ContextStack",
+      "location": "channel.message.action"
+    }
+  ]
+}
